@@ -44,7 +44,7 @@ const BookingForm = (props) => {
         required
       >
         <option value="">Select a time</option>
-        {props.availableTimes.availableTimes.map((availableTimes) => (
+        {props.availableTimes.map((availableTimes) => (
           <option key={availableTimes}>{availableTimes}</option>
         ))}
       </select>

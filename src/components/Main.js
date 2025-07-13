@@ -31,7 +31,7 @@ const Main = () => {
 
   // Simulate API call to submit booking data
   // Use useReducer for availableTimes state
-  const initializeTimes = { availableTimes: fetchAPI(new Date()) };
+  const initializeTimes = { availableTimes: fetchAPI(new Date()) }; // this is object with key availableTimes
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
 
   function updateTimes(state, date) {
