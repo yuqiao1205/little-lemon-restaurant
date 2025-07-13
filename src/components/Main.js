@@ -53,7 +53,7 @@ const Main = () => {
           path="/bookings"
           element={
             <BookingPage
-              availableTimes={availableTimes}
+              availableTimes={availableTimes.availableTimes}
               dispatch={dispatch}
               submitForm={submitForm}
             />
