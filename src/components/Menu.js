@@ -7,7 +7,7 @@ const Menu = () => {
     <div className="menu-container">
       <div className="menu-header">
         <h2>This weeks specials</h2>
-        <button>Order Menu</button>
+        <button>Online Menu</button>
       </div>
 
       {/* Menu items */}
@@ -16,7 +16,7 @@ const Menu = () => {
           <Card
             key={recipe.id}
             image={recipe.image}
-            name={recipe.name}
+            title={recipe.title}
             price={recipe.price}
             description={recipe.description}
           />

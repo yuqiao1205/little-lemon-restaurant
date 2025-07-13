@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../assets/logo.svg"; // Adjust the path as necessary
+import { Link } from "react-router-dom"; // ✅ Import Link
+import logo from "../assets/logo.svg";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -11,40 +12,53 @@ const Nav = () => {
   return (
     <nav className={`navbar ${menuOpen ? "open" : ""}`}>
       {/* logo */}
-      <a href="/" className="logo">
+      <Link to="/" className="logo">
         <img src={logo} alt="Little Lemon Logo" className="logo" />
-      </a>
+      </Link>
 
-      {/* mobile hamburger bar */}
-      {/* display: none on desktop in css setting*/}
+      {/* mobile hamburger icon */}
       <div className="menu-icon" onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
 
-      {/* desktop nav items */}
+      {/* nav items */}
       <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
         <li>
-          <a href="/">Home</a>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href="/about">About</a>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
         </li>
         <li>
-          <a href="/about">Services</a>
+          <Link to="/services" onClick={() => setMenuOpen(false)}>
+            Services
+          </Link>
         </li>
         <li>
-          <a href="/about">Menu</a>
+          <Link to="/menu" onClick={() => setMenuOpen(false)}>
+            Menu
+          </Link>
         </li>
         <li>
-          <a href="/reservations">Reservations</a>
+          <Link to="/bookings" onClick={() => setMenuOpen(false)}>
+            Reservations
+          </Link>
         </li>
         <li>
-          <a href="/order-online">Order Online</a>
+          <Link to="/order-online" onClick={() => setMenuOpen(false)}>
+            Order Online
+          </Link>
         </li>
         <li>
-          <a href="/order-online">Login</a>
+          <Link to="/login" onClick={() => setMenuOpen(false)}>
+            Login
+          </Link>
         </li>
       </ul>
     </nav>
