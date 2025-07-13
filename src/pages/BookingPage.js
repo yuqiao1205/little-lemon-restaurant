@@ -18,6 +18,7 @@ const BookingPage = (props) => {
         <BookingForm
           availableTimes={props.availableTimes}
           dispatch={props.dispatch}
+          submitForm={props.submitForm}
         />
       </section>
 

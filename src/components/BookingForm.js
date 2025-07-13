@@ -10,8 +10,14 @@ const BookingForm = (props) => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.submitForm(e);
     // Form submission logic will be added later when connecting to API
-    console.log("Form submitted:", { date, time, guests, occasion });
+    // console.log("Form submitted:", { date, time, guests, occasion });
+  };
+
+  const handleChange = (e) => {
+    setDate(e);
+    props.dispatch(e);
   };
 
   return (
@@ -25,8 +31,7 @@ const BookingForm = (props) => {
         id="res-date"
         value={date}
         onChange={(e) => {
-          setDate(e.target.value);
-          props.dispatch({ type: "UPDATE_TIMES", date: e.target.value });
+          handleChange(e.target.value);
         }}
         required
       />
@@ -39,10 +44,8 @@ const BookingForm = (props) => {
         required
       >
         <option value="">Select a time</option>
-        {props.availableTimes.map((timeOption) => (
-          <option key={timeOption} value={timeOption}>
-            {timeOption}
-          </option>
+        {props.availableTimes.availableTimes.map((availableTimes) => (
+          <option key={availableTimes}>{availableTimes}</option>
         ))}
       </select>
 
