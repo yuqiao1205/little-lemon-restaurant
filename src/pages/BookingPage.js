@@ -16,7 +16,7 @@ const BookingPage = (props) => {
         style={{ padding: "2rem", display: "flex", justifyContent: "center" }}
       >
         <BookingForm
-          availableTimes={props.availableTimes.availableTimes} // parents pass only array of times
+          availableTimes={props.availableTimes} // props.availableTimes is already the array
           dispatch={props.dispatch}
           submitForm={props.submitForm}
         />
