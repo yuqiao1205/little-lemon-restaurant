@@ -25,14 +25,16 @@ const BookingForm = (props) => {
     if (!date) newErrors.date = "Date is required";
     else if (date < today) newErrors.date = "Date cannot be in the past";
 
+    // if (time === "" || time === null || time === undefined)
     if (!time) newErrors.time = "Time is required";
     if (guests < 1 || guests > 10)
       newErrors.guests = "Guests must be between 1 and 10";
     if (!occasion) newErrors.occasion = "Occasion is required";
 
     setErrors(newErrors);
+    // Check if the form is valid  (when there are no errors)
     setIsFormValid(Object.keys(newErrors).length === 0);
-  }, [date, time, guests, occasion]);
+  }, [date, time, guests, occasion, today]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -133,6 +135,7 @@ const BookingForm = (props) => {
               <button
                 type="submit"
                 className="submit-btn"
+                aria-label="On Click"
                 disabled={!isFormValid}
               >
                 Make Your Reservation
