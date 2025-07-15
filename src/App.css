@@ -93,8 +93,8 @@ h3 {
 
 }
 
-/* .banner text description */
-.banner p {
+/* .hero text description */
+.hero p {
   font-size: 20px;
   max-width: 520px;
   line-height: 1.5;
@@ -123,17 +123,7 @@ button {
   
 }
 
-/* card component styles */
 
-.order-link {
-  display: inline-flex;
-  align-items: center;
-  margin-top: 12px;
-  color: #333333;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
 
 
 /* booking form styles */
@@ -174,25 +164,38 @@ input, label{
 
 
 /* menu items */
+/* card component styles */
 
-.menu-container{
+.order-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.card-container{
   margin: 100px auto;
   padding: 10px 13%;
 }
 
-.menu-container h2{
+.header-title{
   color: #000;
   font-size: 36px;
   font-family: karla, sans-serif;
 }
 
-.menu-header{
+.promotion-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
 }
 
+/* card container styles */
 .cards{
   margin-top: 25px;
   display: flex;
@@ -201,9 +204,8 @@ input, label{
   flex-wrap: wrap;
   gap: 2rem 1rem;
 
-
 }
-
+/* individual card item styles */
 .menu-items {
   width: 360px;
   padding-bottom: 2%;
@@ -213,8 +215,6 @@ input, label{
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
-
 
 .menu-img{
   width: 100%;

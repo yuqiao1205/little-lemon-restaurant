@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import BookingPage from "../pages/BookingPage";
@@ -62,7 +62,6 @@ const Main = () => {
         />
         <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
         <Route path="/about" element={<AboutPage />} />
-        {/* Add other routes as needed */}
       </Routes>
     </main>
   );

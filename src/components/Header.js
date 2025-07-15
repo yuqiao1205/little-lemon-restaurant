@@ -1,12 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import food1 from "../assets/restauranfood1.jpg"; // Adjust the path as necessary
+import restaurant from "../assets/restauranfood1.jpg"; // Adjust the path as necessary
 
 const Header = () => {
   return (
     <header className="header">
       <section>
-        <div className="banner">
+        <div className="hero">
+          {/* Restaurant name and description */}
           <h2>Little Lemon</h2>
           <h3>Chicago</h3>
           <p>
@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         {/* hero image */}
         <div>
-          <img src={food1} alt="Serving food" className="hero-img" />
+          <img src={restaurant} alt="Serving food" className="hero-img" />
         </div>
       </section>
     </header>

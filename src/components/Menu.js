@@ -3,13 +3,13 @@ import Card from "./Card";
 
 const Menu = () => {
   return (
-    <div className="menu-container">
-      <div className="menu-header">
-        <h2>This Weeks Specials!</h2>
+    <div className="card-container">
+      <div className="promotion-header">
+        <h2 className="header-title">This Weeks Specials!</h2>
         <button>Online Menu</button>
       </div>
 
-      {/* Menu items */}
+      {/* Card items */}
       <div className="cards">
         {foods.map((food) => (
           <Card
