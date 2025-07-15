@@ -35,11 +35,7 @@ const Nav = () => {
             About
           </Link>
         </li>
-        <li>
-          <Link to="/services" onClick={() => setMenuOpen(false)}>
-            Services
-          </Link>
-        </li>
+
         <li>
           <Link to="/menu" onClick={() => setMenuOpen(false)}>
             Menu

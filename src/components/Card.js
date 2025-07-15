@@ -1,4 +1,7 @@
 import React from "react";
+import deliveryIcon from "../assets/deliveryicon.png";
+import { Link } from "react-router-dom";
+import { FaMotorcycle } from "react-icons/fa";
 
 const Card = ({ image, title, price, description }) => {
   return (
@@ -10,7 +13,9 @@ const Card = ({ image, title, price, description }) => {
           <p className="menu-price">${price}</p>
         </div>
         <p>{description}</p>
-        <button className="orderbtn">Order delivery</button>
+        <Link to="#" className="order-link">
+          Order a delivery <FaMotorcycle style={{ marginLeft: "8px" }} />
+        </Link>
       </div>
     </div>
   );

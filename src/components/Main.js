@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./Header";
 import BookingPage from "../pages/BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
+import AboutPage from "../pages/About";
 
 const Main = () => {
   // Seeded random number generator for consistent results
@@ -60,6 +61,8 @@ const Main = () => {
           }
         />
         <Route path="/confirmed-booking" element={<ConfirmedBooking />} />
+        <Route path="/about" element={<AboutPage />} />
+        {/* Add other routes as needed */}
       </Routes>
     </main>
   );

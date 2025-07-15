@@ -25,7 +25,7 @@ nav{
 
 nav ul li {
   display: inline-block;
-  padding: 1em;
+  padding: 2em;
 }
 
 nav ul li a{
@@ -53,6 +53,7 @@ nav ul li a:hover{
   list-style: none;
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 
 /* mobile model shows dropdown menu */
@@ -73,12 +74,12 @@ nav ul li a:hover{
 /* header section */
 
 .header {
-  background-color: #495e57;
+  background-color: #495E57;
   padding: 40px 0;
 }
 
 .header section {
-color: #EDEFEE;
+color: #edefef;
 padding: 10px 13%;
 position: relative;
 }
@@ -86,11 +87,15 @@ position: relative;
 
 h2 {
   color: #F4CE14;
-  font-size: 40px;
+  font-size: 64px;
+  font-family: karla, sans-serif;
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 40px;
+  font-family: karla, sans-serif;
+  margin-bottom: 10px;
+
 }
 
 /* .banner text description */
@@ -104,7 +109,7 @@ h3 {
 button {
   background-color: #F4CE14;
   color: black;
-  padding: 14px 18px;
+  padding: 15px 18px;
   border: none;
   text-decoration: none;
   border-radius: 12px;
@@ -113,22 +118,30 @@ button {
   cursor: pointer;
 }
 
-.banner-img{
+.hero-img{
   position: absolute; /* Position the image absolutely within the section */
   right: 13%;
-  top: 15%;
+  top: 18%;
   width: 400px;
-  border-radius: 20px
+  border-radius: 20px;
+  height: 450px;
   
 }
 
-/* .banner-img img {
-  width: 100%;
-  height: 500px;
-  border-radius: 20px;
-} */
+/* card component styles */
+
+.order-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
 
+/* booking form styles */
 form, .confirm{
   padding: 10px 13%;
 }
@@ -168,12 +181,14 @@ input, label{
 /* menu items */
 
 .menu-container{
-  margin: 110px auto;
+  margin: 100px auto;
   padding: 10px 13%;
 }
 
 .menu-container h2{
   color: #000;
+  font-size: 36px;
+  font-family: karla, sans-serif;
 }
 
 .menu-header{
@@ -194,39 +209,47 @@ input, label{
 
 }
 
-.menu-items{
-  width: 350px;
-  background: #e9edec;
-  border-radius: 8px;
+.menu-items {
+  width: 360px;
+  padding-bottom: 2%;
+  background: #edefef;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
+
 
 
 .menu-img{
   width: 100%;
-  height: 280px;
-  border-radius: 8px;
+  height: 300px;
+   border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .menu-content{
   padding: 5px 15px;
+  font-family: karla, sans-serif;
 
 }
 
 .menu-price{
-  color: #d08d19;
+  color: #ee9972;
+  font-weight: 600;
+  font-size: 18px;
 } 
 
 .menu-heading{
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-.orderbtn{
-  padding: 5px 12px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 600;
-}
+
 
 footer section{
   padding: 10px 13%;
@@ -235,13 +258,13 @@ footer section{
   align-items: start;
 }
 
-.company-info img{
+.restaurant-info img{
   margin-top: 12px;
   cursor: pointer;
   width: 200px;
 }
 
-.company-info p{
+.restaurant-info p{
   width: 320px;
 }
 
@@ -359,7 +382,7 @@ select {
     background: #333333;
   }
 
-  .banner-img{
+  .hero-img{
     display: none;
   }
 
@@ -394,3 +417,173 @@ select {
 .hidden{
   display: none;
 }
+
+
+
+/* Confirmed Booking Styles */
+.confirmation-page {
+  background-color: #495e57; /* dark green tone */
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.confirmation-title {
+  color: #f4ce14; /* yellow */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Karla', sans-serif;
+}
+
+.confirmation-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  font-family: 'Karla', sans-serif;
+}
+
+.home-button {
+  background-color: #f4ce14;
+  color: black;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #e5bd00;
+}
+
+
+/* Overall page layout */
+.about-page {
+  font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+  color: #333;
+  background-color: #fdfdf9;
+  padding: 60px 20px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* Top Section: Title, Subtitle, Description + Logo */
+.about-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fffdf6;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 60%;
+}
+
+.about-title {
+  margin: 0;
+  font-size: 2.8rem;
+  color: #bc902f;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.about-subtitle {
+  margin-top: 8px;
+  font-size: 1.5rem;
+  color: #6f6c59;
+}
+
+.about-description {
+  margin-top: 20px;
+  font-size: 1.15rem;
+  color: #4b4a44;
+}
+
+/* Lemon icon */
+.about-image img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  background-color: #fceabb;
+  padding: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Bottom Section: Restaurant Image and Story */
+.about-bottom {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-bottom .about-image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.about-story {
+  flex: 1 1 55%;
+}
+
+.about-story h2 {
+  font-size: 1.8rem;
+  color: #bc902f;
+  margin-bottom: 1rem;
+}
+
+.about-story p {
+  font-size: 1.12rem;
+  color: #44423f;
+  line-height: 1.7;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-top,
+  .about-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .about-text,
+  .about-story {
+    flex: 1 1 100%;
+  }
+
+  .about-image img {
+    margin: 20px auto;
+  }
+
+  .about-bottom .about-image img {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+

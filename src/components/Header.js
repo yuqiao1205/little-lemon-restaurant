@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import food1 from "../assets/food1.jpg"; // Adjust the path as necessary
+import food1 from "../assets/restauranfood1.jpg"; // Adjust the path as necessary
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         {/* hero image */}
         <div>
-          <img src={food1} alt="Serving food" className="banner-img" />
+          <img src={food1} alt="Serving food" className="hero-img" />
         </div>
       </section>
     </header>

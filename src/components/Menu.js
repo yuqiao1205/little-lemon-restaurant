@@ -1,24 +1,23 @@
-import receipes from "../assets/recipes.js";
-import React from "react";
+import foods from "../assets/foods.js";
 import Card from "./Card";
 
 const Menu = () => {
   return (
     <div className="menu-container">
       <div className="menu-header">
-        <h2>This weeks specials</h2>
+        <h2>This weeks specials!</h2>
         <button>Online Menu</button>
       </div>
 
       {/* Menu items */}
       <div className="cards">
-        {receipes.map((recipe) => (
+        {foods.map((food) => (
           <Card
-            key={recipe.id}
-            image={recipe.image}
-            title={recipe.title}
-            price={recipe.price}
-            description={recipe.description}
+            key={food.id}
+            image={food.image}
+            title={food.title}
+            price={food.price}
+            description={food.description}
           />
         ))}
       </div>
