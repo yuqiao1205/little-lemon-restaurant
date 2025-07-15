@@ -51,7 +51,7 @@ test("Renders the BookingForm static text", () => {
   const occasionLabel = screen.getByText("Occasion");
   expect(occasionLabel).toBeInTheDocument();
 
-  const submitButton = screen.getByDisplayValue("Make Your reservation");
+  const submitButton = screen.getByText("Make Your Reservation");
   expect(submitButton).toBeInTheDocument();
 });
 
@@ -95,7 +95,7 @@ test("updateTimes returns available times based on selected date", () => {
 });
 
 // Test 4: BookingForm can be submitted by the user
-test("BookingForm can be submitted by the user", () => {
+test("BookingForm can be submitted by the user", async () => {
   const mockDispatch = jest.fn();
   const mockSubmitForm = jest.fn();
   const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
@@ -108,25 +108,38 @@ test("BookingForm can be submitted by the user", () => {
     />
   );
 
+  // Use a future date to ensure validation passes
+  const futureDate = new Date();
+  futureDate.setDate(futureDate.getDate() + 7); // 7 days from now
+  const futureDateString = futureDate.toISOString().split("T")[0];
+
   // Fill out the form fields
   const dateInput = screen.getByLabelText("Choose date");
   const timeSelect = screen.getByLabelText("Choose time");
   const guestsInput = screen.getByLabelText("Number of guests");
   const occasionSelect = screen.getByLabelText("Occasion");
-  const submitButton = screen.getByDisplayValue("Make Your reservation");
+  const submitButton = screen.getByText("Make Your Reservation");
 
   // Simulate user input
-  fireEvent.change(dateInput, { target: { value: "2025-01-15" } });
+  fireEvent.change(dateInput, { target: { value: futureDateString } });
   fireEvent.change(timeSelect, { target: { value: "18:00" } });
   fireEvent.change(guestsInput, { target: { value: "4" } });
   fireEvent.change(occasionSelect, { target: { value: "Birthday" } });
+
+  // Wait for form validation to complete
+  await new Promise((resolve) => setTimeout(resolve, 100));
 
   // Submit the form
   fireEvent.click(submitButton);
 
   // Verify that dispatch was called when date changed with just the date string
-  expect(mockDispatch).toHaveBeenCalledWith("2025-01-15");
+  expect(mockDispatch).toHaveBeenCalledWith(futureDateString);
 
-  // Verify that submitForm was called with the form event
-  expect(mockSubmitForm).toHaveBeenCalled();
+  // Verify that submitForm was called with the form data
+  expect(mockSubmitForm).toHaveBeenCalledWith({
+    date: futureDateString,
+    time: "18:00",
+    guests: 4,
+    occasion: "Birthday",
+  });
 });
