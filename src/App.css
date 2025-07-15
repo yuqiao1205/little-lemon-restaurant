@@ -10,12 +10,9 @@ li{
 a{
   text-decoration: none;
 }
-/* 
-nav{
-  z-index: 10001;
-} */
 
 
+/* navbar styles */
 .navbar {
   padding: 10px 13%;
   display: flex;
@@ -25,7 +22,7 @@ nav{
 
 nav ul li {
   display: inline-block;
-  padding: 2em;
+  padding: 1.70em;
 }
 
 nav ul li a{
@@ -37,17 +34,15 @@ nav ul li a:hover{
   
 }
 
+/* mobile menu icon won't display when it is on web model */
 .menu-icon {
   display: none;
   cursor: pointer;
+
+  
 }
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 5px 0;
-}
+
 
 .nav-links {
   list-style: none;
@@ -378,9 +373,7 @@ select {
     color: #fff;
   }
 
-  .bar{
-    background: #333333;
-  }
+
 
   .hero-img{
     display: none;

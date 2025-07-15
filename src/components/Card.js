@@ -1,5 +1,3 @@
-import React from "react";
-import deliveryIcon from "../assets/deliveryicon.png";
 import { Link } from "react-router-dom";
 import { FaMotorcycle } from "react-icons/fa";
 
